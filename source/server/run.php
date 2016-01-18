@@ -8,5 +8,5 @@ ini_set('display_errors', 'On');
 session_start();
 
 include 'autoload.php';
-$application = new JPV\Application\Application('Hello World');
+$application = new JPV\Application\Application();
 echo $application->run();
