@@ -140,6 +140,10 @@ class Application
 		}
 
 		$actionParameters = json_decode($actionParametersString);
+		if ($actionParameters === null)
+		{
+			$actionParameters = [];
+		}
 
 		$data = call_user_func_array([$controller, $actionName], $actionParameters);
 
